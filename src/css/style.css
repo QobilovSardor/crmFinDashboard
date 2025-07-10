@@ -34,3 +34,17 @@ body {
 .title {
   @apply text-[56px] leading-[110.00000000000001%] font-semibold
 }
+
+.accordion-btn.active  {
+@apply bg-blue
+}
+.accordion-btn.active svg {
+  @apply rotate-180
+}
+.accordion-btn.active path {
+@apply stroke-white
+}
+
+.accordion-content p {
+  padding-top: 12px;
+}
