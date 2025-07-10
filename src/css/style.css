@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+span,
+a {
+  @apply inline-block no-underline;
+}
+body {
+  @apply text-black text-base font-normal font-Montserrat leading-6;
+}
+.container {
+  @apply max-w-[1296px] mx-auto;
+}
+.main-main {
+  @apply max-w-[1792px] mx-auto;
+}
+
+.btn-blue {
+  @apply h-14 w-fit px-7 py-4 bg-blue text-white flex gap-[10px] items-center font-semibold rounded-lg;
+}
+.btn-outline-blue {
+  @apply h-14 w-fit px-7 py-4 bg-transparent text-blue border border-blue flex gap-[10px] items-center font-semibold rounded-lg;
+}
+
+.btn-blue-big {
+  @apply h-[72px] w-fit px-8 py-6 bg-blue text-white flex gap-3 items-center font-semibold rounded-lg;
+}
