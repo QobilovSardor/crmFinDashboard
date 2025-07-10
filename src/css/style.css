@@ -12,7 +12,7 @@ body {
 .container {
   @apply max-w-[1296px] mx-auto;
 }
-.main-main {
+.main-container {
   @apply max-w-[1792px] mx-auto;
 }
 
@@ -25,4 +25,12 @@ body {
 
 .btn-blue-big {
   @apply h-[72px] w-fit px-8 py-6 bg-blue text-white flex gap-3 items-center font-semibold rounded-lg;
+}
+
+.btn-blue-big {
+  @apply h-[72px] w-fit px-8 py-6 bg-transparent text-white flex gap-3 items-center font-semibold rounded-lg border border-white;
+}
+
+.title {
+  @apply text-[56px] leading-[110.00000000000001%] font-semibold
 }

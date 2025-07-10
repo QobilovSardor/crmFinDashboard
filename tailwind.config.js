@@ -8,10 +8,13 @@ export default {
     extend: {
       colors: {
         'black': "#141414",
-        "blue": "#407BFF"
+        "blue": "#407BFF",
+        'gray': "#707D89",
+        "light": "#F4F7FF"
       },
       backgroundImage: {
-        'intro-bg': "url('../images/intro-bg.png')"
+        'intro-bg': "url('../images/intro-bg.png')",
+        "chart-bg": "url('../images/chart-bg.png')"
       },
       fontFamily: {
         'Montserrat': ["Montserrat, 'sans-serif'"]
