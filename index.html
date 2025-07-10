@@ -39,15 +39,15 @@
             </div>
           </div>
         </header>
-        <!-- intro -->
 
+        <!-- intro -->
         <section>
           <h1 class="text-[56px] font-semibold leading-[110.00000000000001%] text-center pb-10"><span
               class="text-blue">Продажа заявок</span> на кредиты, займы, ипотеку,
             автокредит и банкротство</h1>
-          <a class="btn-blue-big mx-auto mb-12" href="#!">
+          <a class="btn-blue-big !bg-blue mx-auto mb-12" href="#!">
             <span>Перейти к заявкам</span>
-            <img src="src/images/icons/next-arrow.svg" alt="next-arrow">
+            <img src="src/images/icons/next-arrow.svg" alt="">
           </a>
           <div class="relative w-fit mx-auto">
             <div class="bg-blue rounded-3xl p-6 -rotate-[3deg] w-[260px] absolute bottom-[84px] -left-[88px]">
@@ -145,7 +145,7 @@
         <div>
           <h2 class="text-[56px] leading-[110.00000000000001%] font-semibold mb-8"><span>5 преимуществ</span> сервиса
           </h2>
-          <p class="text-gray">
+          <p class="text-gray max-w-[525px]">
             Lorem ipsum dolor sit amet consectetur. Nisl sit diam mauris lectus massa nulla proin neque. Amet mattis
             ipsum amet nunc sed. Blandit nunc id commodo lectus orci ac. Venenatis est eros tellus.
           </p>
@@ -236,11 +236,11 @@
             </p>
             <div class="gap-12 flex items-end mt-[52px] w-fit mx-auto">
               <div>
-                <span class="text-[32px] leading-[130%] text-center font-semibold mb-4 ">42</span>
+                <span class="text-[32px] leading-[130%] text-center mb-4 font-semibold">42</span>
                 <div class="w-[200px] h-[108px] rounded-t-[28px] bg-chart-bg bg-no-repeat bg-cover"></div>
               </div>
               <div>
-                <span class="text-[32px] leading-[130%] text-center font-semibold mb-4 ">322</span>
+                <span class="text-[32px] leading-[130%] text-center mb-4 font-extrabold">322</span>
                 <div class="w-[200px] h-[200px] bg-blue rounded-t-[28px]"></div>
               </div>
             </div>
@@ -259,11 +259,11 @@
             </p>
             <div class="gap-12 flex items-end mt-[52px] w-fit mx-auto">
               <div>
-                <span class="text-[32px] leading-[130%] text-center font-semibold mb-4 ">42</span>
-                <div class="w-[200px] h-[108px] rounded-t-[28px] bg-chart-bg bg-no-repeat bg-cover"></div>
+                <span class="text-[32px] leading-[130%] text-center mb-4 font-semibold">120</span>
+                <div class="w-[200px] h-[153px] rounded-t-[28px] bg-chart-bg bg-no-repeat bg-cover"></div>
               </div>
               <div>
-                <span class="text-[32px] leading-[130%] text-center font-semibold mb-4 ">322</span>
+                <span class="text-[32px] leading-[130%] text-center mb-4 font-extrabold">180</span>
                 <div class="w-[200px] h-[200px] bg-blue rounded-t-[28px]"></div>
               </div>
             </div>
@@ -305,7 +305,7 @@
     </search>
 
     <section class="container mb-[80px]">
-      <h2 class="title mb-8"><span>Интеграция</span> с другими сервисами</h2>
+      <h2 class="title mb-8"><span class="text-blue">Интеграция</span> с другими сервисами</h2>
       <p>Автоматическая передача данных киентов</p>
       <div class="grid grid-cols-3 gap-6  mt-12">
         <div class="rounded-3xl flex items-center h-[140px] justify-center bg-light">
@@ -321,87 +321,132 @@
       </div>
     </section>
 
-    <search class="container mb-[104px]">
-      <h2 class="title">
-        Часто задаваемые <span class="text-blue">вопросы</span>
-      </h2>
-      <div class="mt-8 space-y-4 select-none">
-        <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
-          <div class="accordion-header flex items-center justify-between cursor-pointer">
-            <h4 class="text-xl font-semibold leading-[30px]">Сколько стоит сервис?</h4>
-            <div class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
-              <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
+    <search class="pb-[104px] rounded-[64px] bg-white relative z-10">
+      <div class="container">
+        <h2 class="title">
+          Часто задаваемые <span class="text-blue">вопросы</span>
+        </h2>
+        <div class="mt-8 space-y-4 select-none">
+          <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
+            <div class="accordion-header flex items-center justify-between cursor-pointer">
+              <h4 class="text-xl font-semibold leading-[30px]">Сколько стоит сервис?</h4>
+              <div
+                class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
+                <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
 
+              </div>
+            </div>
+            <div class="accordion-content text-gray max-h-0 overflow-hidden transition-all duration-100 ease">
+              <p class="max-w-[926px]">
+                Lorem ipsum dolor sit amet consectetur. Sagittis mattis molestie sed nibh feugiat purus nisi. Nisl at at
+                pellentesque sed. Augue libero pharetra at nibh.
+              </p>
             </div>
           </div>
-          <div class="accordion-content text-gray max-h-0 overflow-hidden transition-all duration-100 ease">
-            <p class="max-w-[926px]">
-              Lorem ipsum dolor sit amet consectetur. Sagittis mattis molestie sed nibh feugiat purus nisi. Nisl at at
-              pellentesque sed. Augue libero pharetra at nibh.
-            </p>
-          </div>
-        </div>
-        <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
-          <div class="accordion-header flex items-center justify-between cursor-pointer">
-            <h4 class="text-xl font-semibold leading-[30px]">Есть ли ограничения на сумму выплат?</h4>
-            <div class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
-              <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
+          <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
+            <div class="accordion-header flex items-center justify-between cursor-pointer">
+              <h4 class="text-xl font-semibold leading-[30px]">Есть ли ограничения на сумму выплат?</h4>
+              <div
+                class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
+                <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
 
+              </div>
+            </div>
+            <div class="accordion-content text-gray max-h-0 overflow-hidden transition-all duration-100 ease">
+              <p class="max-w-[926px]">
+                Lorem ipsum dolor sit amet consectetur. Sagittis mattis molestie sed nibh feugiat purus nisi. Nisl at at
+                pellentesque sed. Augue libero pharetra at nibh.
+              </p>
             </div>
           </div>
-          <div class="accordion-content text-gray max-h-0 overflow-hidden transition-all duration-100 ease">
-            <p class="max-w-[926px]">
-              Lorem ipsum dolor sit amet consectetur. Sagittis mattis molestie sed nibh feugiat purus nisi. Nisl at at
-              pellentesque sed. Augue libero pharetra at nibh.
-            </p>
-          </div>
-        </div>
-        <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
-          <div class="accordion-header flex items-center justify-between cursor-pointer">
-            <h4 class="text-xl font-semibold leading-[30px]">Есть ли ограничения на сумму выплат?</h4>
-            <div class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
-              <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
+          <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
+            <div class="accordion-header flex items-center justify-between cursor-pointer">
+              <h4 class="text-xl font-semibold leading-[30px]">Есть ли ограничения на сумму выплат?</h4>
+              <div
+                class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
+                <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
 
+              </div>
+            </div>
+            <div class="accordion-content text-gray max-h-0 overflow-hidden transition-all duration-100 ease">
+              <p class="max-w-[926px]">
+                Lorem ipsum dolor sit amet consectetur. Sagittis mattis molestie sed nibh feugiat purus nisi. Nisl at at
+                pellentesque sed. Augue libero pharetra at nibh.
+              </p>
             </div>
           </div>
-          <div class="accordion-content text-gray max-h-0 overflow-hidden transition-all duration-100 ease">
-            <p class="max-w-[926px]">
-              Lorem ipsum dolor sit amet consectetur. Sagittis mattis molestie sed nibh feugiat purus nisi. Nisl at at
-              pellentesque sed. Augue libero pharetra at nibh.
-            </p>
-          </div>
-        </div>
-        <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
-          <div class="accordion-header flex items-center justify-between cursor-pointer">
-            <h4 class="text-xl font-semibold leading-[30px]">Сколько стоит сервис?</h4>
-            <div class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
-              <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" />
-              </svg>
+          <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
+            <div class="accordion-header flex items-center justify-between cursor-pointer">
+              <h4 class="text-xl font-semibold leading-[30px]">Сколько стоит сервис?</h4>
+              <div
+                class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
+                <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
 
+              </div>
             </div>
-          </div>
-          <div class="accordion-content text-gray max-h-0 overflow-hidden transition-all duration-100 ease">
-            <p class="max-w-[926px]">
-              Lorem ipsum dolor sit amet consectetur. Sagittis mattis molestie sed nibh feugiat purus nisi. Nisl at at
-              pellentesque sed. Augue libero pharetra at nibh.
-            </p>
+            <div class="accordion-content text-gray max-h-0 overflow-hidden transition-all duration-100 ease">
+              <p class="max-w-[926px]">
+                Lorem ipsum dolor sit amet consectetur. Sagittis mattis molestie sed nibh feugiat purus nisi. Nisl at at
+                pellentesque sed. Augue libero pharetra at nibh.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </search>
 
+
+    <footer class="bg-black text-white pt-[112px] pb-12 -mt-16">
+      <div class="container flex items-end justify-between">
+        <div class="space-y-8 max-w-[791px]">
+          <span class="text-sm">Оператор персональных данных, регистрационный номер в реестре операторов Роскомнадзора
+            11-11-111333</span>
+          <span class="text-sm">123734, Сочи г, ул. Красивая 54/5.</span>
+          <span class="text-sm">Политика обработки персональных данных</span>
+          <div class="space-y-2">
+            <span class="text-sm block">ООО "CRMFIN", ИНН 5465545111, ОГРН 1358325732683 </span>
+            <span class="text-sm block">© 2022–2024 crmFIN. Все права защищены.</span>
+          </div>
+        </div>
+        <div class="w-[285px]">
+          <a class="text-white text-end text-2xl mb-6 font-semibold block" href="#!">8 800 000-00-00</a>
+          <div class="flex gap-10 justify-end">
+            <div class="flex items-center gap-3">
+              <a href="#!" class="flex items-center gap-3 text-white text-sm">
+                <div class="flex items-center w-10 h-10 justify-center rounded-full bg-blue">
+                  <img src="src/images/icons/call.svg" alt="">
+                </div>
+                <span>WhatsApp</span>
+              </a>
+              <a href="#!" class="flex items-center gap-3 text-white text-sm">
+                <div class="flex items-center w-10 h-10 justify-center rounded-full bg-blue">
+                  <img src="src/images/icons/tg.svg" alt="">
+                </div>
+                <span>Telegram</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
   </div>
+
 
   <!-- js -->
   <script src="src/js/main.js"></script>
