@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
+    "./*.html",
     "./src/**/*.{html,js}",
   ],
   theme: {
@@ -15,6 +15,9 @@ export default {
       backgroundImage: {
         'intro-bg': "url('../images/intro-bg.png')",
         "chart-bg": "url('../images/chart-bg.png')"
+      },
+      lineHeight: {
+        'full': "100%"
       },
       fontFamily: {
         'Montserrat': ["Montserrat, 'sans-serif'"]

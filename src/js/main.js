@@ -88,3 +88,33 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+const dropdowns = document.querySelectorAll('.dropdown');
+dropdowns.forEach(dropdown => {
+  const dropdownHeader = dropdown.querySelector(".dropdown-header");
+  const dropdownContent = dropdown.querySelector(".dropdown-content");
+  const dropdownIcon = dropdown.querySelector('.dropdown-btn')
+  dropdownHeader.addEventListener("click", () => {
+    dropdownContent.classList.toggle('hidden');
+    dropdownIcon.classList.toggle('rotate-180')
+  })
+})
+
+
+var swiper = new Swiper(".cards-swiper", {
+  effect: "cards",
+  grabCursor: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+});
+
+
+$('.logo-slider-wrap').marquee({
+  duration: 10000,          // Butun animatsiya davomiyligi (ms)
+  gap: 50,                 // Elementlar orasidagi bo‘shliq (px)
+  delayBeforeStart: 0,     // Boshlanishdan oldingi kechikish
+  direction: 'left',       // Harakat yo‘nalishi: 'left' yoki 'right'
+  duplicated: true         // Kontentni ikki marta ko‘rsatish (to‘xtovsiz aylanish uchun)
+});

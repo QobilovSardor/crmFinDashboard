@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <!-- font -->
   <link rel="stylesheet" href="src/fonts/montserrat/stylesheet.css">
   <!-- custom css link -->
@@ -14,25 +16,31 @@
 <body>
   <div class="overflow-hidden">
 
-    <div class="bg-intro-bg mb-[80px] rounded-b-[64px] bg-cover bg-no-repeat">
+    <div class="bg-intro-bg sm:mb-[80px] sm:rounded-b-[64px] rounded-b-3xl bg-cover bg-no-repeat">
 
       <div class="container">
         <!-- header -->
-        <header class="flex items-center justify-between pt-7 pb-[60px]">
-          <a class="w-[142px] h-10" href="#!">
+        <header class="flex items-center justify-between lg:pt-7 lg:pb-[60px] sm:pb-10 sm:pt-6 pt-4 pb-6">
+          <a class="sm:w-[142px] sm:h-10 w-[85px] h-6" href="#!">
             <img class="w-full h-full" src="src/images/logo.svg" alt="logo">
           </a>
-          <div class="flex items-center gap-10">
-            <a class="flex gap-[10px] " href="#!">
-              <img src="src/images/icons/mail.svg" alt="mail">
+          <div class="flex items-center lg:gap-10 sm:gap-8">
+            <a class="sm:flex hidden gap-[10px] " href="#!">
+              <img class="lg:block hidden" src="src/images/icons/mail.svg" alt="mail">
               <span>mail@pochta.ru</span>
             </a>
-            <div class="flex gap-4">
-              <a class="btn-blue" href="#!">
-                <img src="src/images/icons/phone.svg" alt="">
-                <span>Заказать звонок</span>
+            <div class="flex lg:gap-4 sm:gap-8 gap-6">
+              <a class="btn-blue header-call__btn" href="#!">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8.38028 8.85323C9.07627 10.3028 10.0251 11.6615 11.2266 12.8631C12.4282 14.0646 13.7869 15.0134 15.2365 15.7094C15.3612 15.7693 15.4235 15.7992 15.5024 15.8222C15.7828 15.904 16.127 15.8453 16.3644 15.6752C16.4313 15.6274 16.4884 15.5702 16.6027 15.4559C16.9523 15.1063 17.1271 14.9315 17.3029 14.8172C17.9658 14.3862 18.8204 14.3862 19.4833 14.8172C19.6591 14.9315 19.8339 15.1063 20.1835 15.4559L20.3783 15.6508C20.9098 16.1822 21.1755 16.448 21.3198 16.7333C21.6069 17.3009 21.6069 17.9712 21.3198 18.5387C21.1755 18.8241 20.9098 19.0898 20.3783 19.6213L20.2207 19.7789C19.6911 20.3085 19.4263 20.5733 19.0662 20.7756C18.6667 21 18.0462 21.1614 17.588 21.16C17.1751 21.1588 16.8928 21.0787 16.3284 20.9185C13.295 20.0575 10.4326 18.433 8.04466 16.045C5.65668 13.6571 4.03221 10.7947 3.17124 7.76131C3.01103 7.19687 2.93092 6.91464 2.9297 6.5017C2.92833 6.04347 3.08969 5.42298 3.31411 5.02348C3.51636 4.66345 3.78117 4.39863 4.3108 3.86901L4.46843 3.71138C4.99987 3.17993 5.2656 2.91421 5.55098 2.76987C6.11854 2.4828 6.7888 2.4828 7.35636 2.76987C7.64174 2.91421 7.90747 3.17993 8.43891 3.71138L8.63378 3.90625C8.98338 4.25585 9.15819 4.43065 9.27247 4.60643C9.70347 5.26932 9.70347 6.1239 9.27247 6.78679C9.15819 6.96257 8.98338 7.13738 8.63378 7.48698C8.51947 7.60129 8.46231 7.65845 8.41447 7.72526C8.24446 7.96269 8.18576 8.30695 8.26748 8.5873C8.29048 8.6662 8.32041 8.72854 8.38028 8.85323Z"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="lg:stroke-white stroke-blue" />
+                </svg>
+
+                <span class="lg:block hidden">Заказать звонок</span>
               </a>
-              <a class="btn-outline-blue" href="#!">
+              <a class="btn-outline-blue header-login__btn" href="#!">
                 <img src="src/images/icons/key.svg" alt="">
                 <span>Войти</span>
               </a>
@@ -41,21 +49,25 @@
         </header>
 
         <!-- intro -->
-        <section>
-          <h1 class="text-[56px] font-semibold leading-[110.00000000000001%] text-center pb-10"><span
-              class="text-blue">Продажа заявок</span> на кредиты, займы, ипотеку,
-            автокредит и банкротство</h1>
-          <a class="btn-blue-big !bg-blue mx-auto mb-12" href="#!">
+        <section class="intro">
+          <h1
+            class="lg:text-[56px] sm:text-[44px] text-[28px] font-semibold leading-[110.00000000000001%] text-center sm:pb-10 pb-6">
+            <span class="text-blue">Продажа заявок</span> на кредиты, займы, ипотеку,
+            автокредит и банкротство
+          </h1>
+          <a class="btn-blue-big !bg-blue mx-auto sm:mb-12 mb-10" href="#!">
             <span>Перейти к заявкам</span>
-            <img src="src/images/icons/next-arrow.svg" alt="">
+            <img src="src/images/icons/next-arrow.svg" alt="" width="24" height="24">
           </a>
           <div class="relative w-fit mx-auto">
-            <div class="bg-blue rounded-3xl p-6 -rotate-[3deg] w-[260px] absolute bottom-[84px] -left-[88px]">
+            <div
+              class="bg-blue rounded-3xl sm:block hidden p-6 xl:-rotate-3 -rotate-2 w-[260px] absolute xl:bottom-[84px] xl:-left-[88px] sm:-bottom-11">
               <img class="w-[40px] h-[40px]" src="/src/images/icons/plus-circle.svg" alt="plus-circle" width="40"
                 height="40">
               <span class="font-semibold mt-6 text-white">Получайте постоянный поток заявок</span>
             </div>
-            <div class="bg-blue rounded-3xl p-6 rotate-[12deg] w-[260px] absolute bottom-[84px] -right-[75px]">
+            <div
+              class="bg-blue rounded-3xl sm:block hidden p-6 xl:rotate-12 sm:rotate-[8deg] w-[260px] absolute xl:bottom-[84px] xl:-right-[75px] bottom-[-10px] right-[43px]">
               <div class="flex items-center">
                 <div class="w-10 h-10 rounded-full border-[4px] border-blue">
                   <img class="w-full h-full" src="src/images/user.svg" alt="user">
@@ -73,32 +85,103 @@
               </div>
               <span class="font-semibold mt-6 text-white">Увеличивайте клиентскую базу</span>
             </div>
-            <img class="mx-auto block max-w-[1059px]" src="src/images/laptop.png" alt="lang">
+            <img
+              class="mx-auto block xl:max-w-[1059px] max-w-[768px] min-w-[602px] md:h-auto h-[297px] xl:ml-0 md:-ml-[30px] sm:-ml-4"
+              src="src/images/laptop.png" alt="lang">
           </div>
         </section>
       </div>
     </div>
 
-    <section class="my-[80px]">
+    <div class="container -mt-6 sm:hidden relative z-[101]">
+      <div class="swiper cards-swiper pb-6">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide !bg-transparent rounded-3xl">
+            <div class="bg-blue rounded-3xl p-6">
+              <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full border-[4px] border-blue">
+                  <img class="w-full h-full" src="src/images/user.svg" alt="user">
+                </div>
+                <div class="w-10 h-10 rounded-full border-[4px] border-blue -ml-[10px]">
+                  <img class="w-full h-full" src="src/images/user.svg" alt="user">
+                </div>
+                <div class="w-10 h-10 rounded-full border-[4px] border-blue -ml-[10px]">
+                  <img class="w-full h-full" src="src/images/user.svg" alt="user">
+                </div>
+                <div class="w-10 h-10 rounded-full border-[4px] border-blue -ml-[10px]">
+                  <img class="w-full h-full" src="src/images/user.svg" alt="user">
+                </div>
+                <span class="font-semibold ml-4 block text-white">x2</span>
+              </div>
+              <span class="font-semibold mt-8 text-white">Увеличивайте клиентскую базу</span>
+            </div>
+          </div>
+          <div class="swiper-slide !bg-transparent rounded-3xl">
+            <div class="bg-blue rounded-3xl p-6">
+              <img class="w-[40px] h-[40px]" src="/src/images/icons/plus-circle.svg" alt="plus-circle" width="40"
+                height="40">
+              <span class="font-semibold mt-8 text-white">Получайте постоянный поток заявок</span>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-pagination !bottom-0"></div>
+      </div>
+    </div>
+
+    <!-- logo slider start -->
+    <section class="logo-slider lg:my-[80px] sm:mb-[56px] sm:mt-[107px] my-10">
+      <div class="logo-slider-wrap">
+        <div class="logo-slider-inner">
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+        </div>
+      </div>
+    </section>
+    <!-- logo slider end -->
+
+    <section class="lg:my-[80px] sm:my-14 my-10">
       <div class="container">
-        <div class="grid grid-cols-4 gap-6">
-          <div class="bg-[#F4F7FF] rounded-3xl p-10 min-h-[306px] flex justify-between flex-col">
-            <h3 class="text-[32px] leading-[130%] font-semibold text-blue">8 000+ <br class="md:block hidden"> Заявок
+        <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-3">
+          <div
+            class="bg-[#F4F7FF] rounded-3xl xl:p-10 sm:p-8 p-5 lg:min-h-[306px] flex justify-between flex-col lg:gap-0 gap-2">
+            <h3 class="lg:text-[32px] text-xl leading-[30px] lg:leading-[130%] font-semibold text-blue">8 000+ <br
+                class="lg:block hidden"> Заявок
             </h3>
             <p>Стабильный поток каждый день</p>
           </div>
-          <div class="bg-[#F4F7FF] rounded-3xl p-10 min-h-[306px] flex justify-between flex-col">
-            <h3 class="text-[32px] leading-[130%] font-semibold text-blue">85 <br class="md:block hidden"> Регионов</h3>
+          <div
+            class="bg-[#F4F7FF] rounded-3xl xl:p-10 sm:p-8 p-5 lg:min-h-[306px] flex justify-between flex-col lg:gap-0 gap-2">
+            <h3 class="lg:text-[32px] text-xl leading-[30px] lg:leading-[130%] font-semibold text-blue">85 <br
+                class="lg:block hidden"> Регионов</h3>
             <p>Генерируем заявки по всей Росии</p>
           </div>
-          <div class="bg-[#F4F7FF] rounded-3xl p-10 min-h-[306px] flex justify-between flex-col -rotate-3">
-            <h3 class="text-[32px] leading-[130%] font-semibold text-blue">5 <br class="md:block hidden">Категорий
+          <div
+            class="bg-[#F4F7FF] rounded-3xl xl:p-10 sm:p-8 p-5 lg:min-h-[306px] flex justify-between flex-col lg:gap-0 gap-2 lg:-rotate-3">
+            <h3 class="lg:text-[32px] s-xl sm:[30px] lg:leading-[130%] font-semibold text-blue">5 <br
+                class="lg:block hidden">Категорий
             </h3>
             <p>Заявки на кредиты, микрозаймы, ипотеку, автокредит, банкротство</p>
           </div>
-          <div class="bg-blue text-white rounded-3xl p-10 min-h-[306px] flex justify-between flex-col relative">
-            <img class="absolute top-0 right-0" src="src/images/icons/card-line.svg" alt="line">
-            <h3 class="text-[32px] leading-[130%] font-semibold">10 <br class="md:block hidden">Лет
+          <div
+            class="bg-blue text-white rounded-3xl xl:p-10 sm:p-8 p-5 lg:min-h-[306px] flex justify-between flex-col lg:gap-0 gap-2 relative">
+            <img class="absolute top-0 right-0 lg:lg:hw-[96px] h-[67px]" src="src/images/icons/card-line.svg"
+              alt="line">
+            <h3 class="lg:text-[32px] sm:text-xl sm:leading-[30px] lg:leading-[130%] font-semibold">10 <br
+                class="lg:block hidden">Лет
             </h3>
             <p>Большой опыт работы в финансовой лидогенерации</p>
           </div>
@@ -109,22 +192,27 @@
 
     <search>
       <div class="main-container bg-blue rounded-3xl relative">
-        <img class="absolute top-0 right-0" src="src/images/icons/card-line-2.svg" alt="line">
-        <img class="absolute bottom-0 left-0" src="src/images/icons/card-line-3.svg" alt="line">
+        <img class="absolute top-0 right-0 lg:w-auto lg:h-auto sm:w-[150px] sm:h-[150px] sm:block hidden"
+          src="src/images/icons/card-line-2.svg" alt="line">
+        <img class="absolute bottom-0 left-0 sm:block hidden" src="src/images/icons/card-line-3.svg" alt="line">
 
-        <div class="container py-[80px] flex items-end justify-between">
-          <div class="text-white max-w-[636px]">
+        <div
+          class="container lg:py-[80px] sm:py-10 py-6 flex xl:items-end items-center justify-between xl:flex-row flex-col lg:gap-0 sm:gap-10 gap-8">
+          <div class="text-white lg:max-w-[636px] max-w-[525px] xl:text-left sm:text-center text-left">
             <div class="relative">
-              <h2 class="text-[40px] leading-[120%] font-semibold">Рост количества заявок <br>
-                без лишних расходов <br> на рекламу</h2>
+              <h2 class="lg:text-[40px] sm:text-[26px] text-[22px] leading-[120%] font-semibold">Рост количества заявок
+                <br>
+                без лишних расходов <br> на рекламу
+              </h2>
               <div
-                class="absolute bottom-[-14px] right-[73px] text-black -rotate-3 py-3 px-8 rounded-[80px] bg-white w-fit text-[40px] leading-[120%] font-semibold flex">
+                class="absolute lg:bottom-[-14px] sm:left-[unset] left-[165px] sm:bottom-[-9px] xl:right-[73px] sm:right-[-5%] lg:right-[-10%] -bottom-4 text-black -rotate-3 py-3 px-8 rounded-[80px] bg-white w-fit lg:text-[40px] sm:text-[26px] text-[22px] leading-[120%] font-semibold flex">
                 в 2 раза</div>
             </div>
-            <p class="mt-8 pb-12">Lorem ipsum dolor sit amet consectetur. Nisl sit diam mauris lectus massa nulla proin
+            <p class="lg:mt-8 lg:mb-12 my-6">Lorem ipsum dolor sit amet consectetur. Nisl sit diam mauris lectus massa
+              nulla proin
               neque. Amet mattis ipsum amet nunc sed. Blandit nunc id commodo lectus orci ac. Venenatis est eros tellus.
             </p>
-            <a class="btn-blue-big" href="#!">
+            <a class="btn-blue-big xl:mx-0 mx-auto" href="#!">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M15 9H15.01M15 15C18.3137 15 21 12.3137 21 9C21 5.68629 18.3137 3 15 3C11.6863 3 9 5.68629 9 9C9 9.27368 9.01832 9.54308 9.05381 9.80704C9.11218 10.2412 9.14136 10.4583 9.12172 10.5956C9.10125 10.7387 9.0752 10.8157 9.00469 10.9419C8.937 11.063 8.81771 11.1823 8.57913 11.4209L3.46863 16.5314C3.29568 16.7043 3.2092 16.7908 3.14736 16.8917C3.09253 16.9812 3.05213 17.0787 3.02763 17.1808C3 17.2959 3 17.4182 3 17.6627V19.4C3 19.9601 3 20.2401 3.10899 20.454C3.20487 20.6422 3.35785 20.7951 3.54601 20.891C3.75992 21 4.03995 21 4.6 21H6.33726C6.58185 21 6.70414 21 6.81923 20.9724C6.92127 20.9479 7.01881 20.9075 7.10828 20.8526C7.2092 20.7908 7.29568 20.7043 7.46863 20.5314L12.5791 15.4209C12.8177 15.1823 12.937 15.063 13.0581 14.9953C13.1843 14.9248 13.2613 14.8987 13.4044 14.8783C13.5417 14.8586 13.7588 14.8878 14.193 14.9462C14.4569 14.9817 14.7263 15 15 15Z"
@@ -133,74 +221,87 @@
               <span>Зарегистрироваться</span>
             </a>
           </div>
-          <div class="-mb-[80px] mr-[14px] min-w-[669px] max-w-[669px]">
-            <img class="w-full" src="src/images/card-img.png" alt="card img">
+          <div class="lg:-mb-[80px] sm:-mb-10 -mb-6 mr-[14px] sm:min-w-[669px] sm:max-w-[669px] w-[328px]">
+            <img class="w-full sm:block hidden" src="src/images/card-img.png" alt="card img">
+            <img class="w-full h-full sm:hidden block" src="src/images/media-card-img.png" alt="card img">
           </div>
         </div>
       </div>
     </search>
 
-    <search class="mt-[80px] mb-[92px]">
-      <div class="container grid grid-cols-2 gap-6">
-        <div>
-          <h2 class="text-[56px] leading-[110.00000000000001%] font-semibold mb-8"><span>5 преимуществ</span> сервиса
+    <search class="lg:mt-[80px] sm:mt-14 mt-10">
+      <div class="container grid lg:grid-cols-2 grid-cols-1 lg:gap-6 sm:gap-10 gap-8">
+        <div class="lg:text-left sm:text-center">
+          <h2
+            class="lg:text-[56px] sm:text-[44px] text-[28px] leading-[110.00000000000001%] font-semibold lg:mb-8 sm:mb-6 mb-4">
+            <span class="text-blue">5 преимуществ</span> сервиса
           </h2>
-          <p class="text-gray max-w-[525px]">
+          <p class="text-gray max-w-[525px] lg:mx-0 mx-auto">
             Lorem ipsum dolor sit amet consectetur. Nisl sit diam mauris lectus massa nulla proin neque. Amet mattis
             ipsum amet nunc sed. Blandit nunc id commodo lectus orci ac. Venenatis est eros tellus.
           </p>
         </div>
-        <div class="space-y-10">
-          <div class="flex items-center gap-6">
-            <div class="w-[72px] h-[72px] flex items-center justify-center bg-[#F4F7FF] rounded-3xl">
+        <div class="lg:space-y-10 lg:block grid sm:grid-cols-2 grid-cols-1 gap-x-6 gap-y-8">
+          <div class="flex lg:items-center items-start sm:gap-6 gap-4">
+            <div
+              class="lg:w-[72px] lg:h-[72px] min-w-[52px] min-h-[52px] w-[52px] h-[52px] flex items-center justify-center bg-[#F4F7FF] lg:rounded-3xl rounded-2xl">
               <img src="src/images/icons/settings.svg" alt="settings">
             </div>
             <div>
-              <h4 class="mb-3 font-semibold text-2xl ">Гибкие фильтры</h4>
+              <h4 class="lg:mb-3 mb-2 font-semibold lg:text-2xl text-lg lg:leading-[32px] leading-[26px]">Гибкие фильтры
+              </h4>
               <p>
                 Выбор лидов по разным параметрам: сумма, возраст, гео
               </p>
             </div>
           </div>
-          <div class="flex items-center gap-6">
-            <div class="w-[72px] h-[72px] flex items-center justify-center bg-[#F4F7FF] rounded-3xl">
+          <div class="flex lg:items-center items-start sm:gap-6 gap-4">
+            <div
+              class="lg:w-[72px] lg:h-[72px] min-w-[52px] min-h-[52px] w-[52px] h-[52px] flex items-center justify-center bg-[#F4F7FF] lg:rounded-3xl rounded-2xl">
               <img src="src/images/icons/bulhorn.svg" alt="settings">
             </div>
             <div>
-              <h4 class="mb-3 font-semibold text-2xl ">Белый трафик</h4>
+              <h4 class="lg:mb-3 mb-2 font-semibold lg:text-2xl text-lg lg:leading-[32px] leading-[26px]">Белый трафик
+              </h4>
               <p>
                 Источники - контекстно медийные рекламные площадки и SEO
               </p>
             </div>
           </div>
-          <div class="flex items-center gap-6">
-            <div class="w-[72px] h-[72px] flex items-center justify-center bg-[#F4F7FF] rounded-3xl">
+          <div class="flex lg:items-center items-start sm:gap-6 gap-4">
+            <div
+              class="lg:w-[72px] lg:h-[72px] min-w-[52px] min-h-[52px] w-[52px] h-[52px] flex items-center justify-center bg-[#F4F7FF] lg:rounded-3xl rounded-2xl">
               <img src="src/images/icons/todo-list.svg" alt="settings">
             </div>
             <div>
-              <h4 class="mb-3 font-semibold text-2xl ">Интеграция</h4>
+              <h4 class="lg:mb-3 mb-2 font-semibold lg:text-2xl text-lg lg:leading-[32px] leading-[26px]">Интеграция
+              </h4>
               <p>
                 Битрикс24, AmoCrm, API для подключения с другими сервисами
               </p>
             </div>
           </div>
-          <div class="flex items-center gap-6">
-            <div class="w-[72px] h-[72px] flex items-center justify-center bg-[#F4F7FF] rounded-3xl">
+          <div class="flex lg:items-center items-start sm:gap-6 gap-4">
+            <div
+              class="lg:w-[72px] lg:h-[72px] min-w-[52px] min-h-[52px] w-[52px] h-[52px] flex items-center justify-center bg-[#F4F7FF] lg:rounded-3xl rounded-2xl">
               <img src="src/images/icons/search.svg" alt="settings">
             </div>
             <div>
-              <h4 class="mb-3 font-semibold text-2xl ">Проверка клиента</h4>
+              <h4 class="lg:mb-3 mb-2 font-semibold lg:text-2xl text-lg lg:leading-[32px] leading-[26px]">Проверка
+                клиента</h4>
               <p>
                 Осуществляем скоринг КИ
               </p>
             </div>
           </div>
-          <div class="flex items-center gap-6">
-            <div class="w-[72px] h-[72px] flex items-center justify-center bg-[#F4F7FF] rounded-3xl">
+          <div class="flex lg:items-center items-start sm:gap-6 gap-4">
+            <div
+              class="lg:w-[72px] lg:h-[72px] min-w-[52px] min-h-[52px] w-[52px] h-[52px] flex items-center justify-center bg-[#F4F7FF] lg:rounded-3xl rounded-2xl">
               <img src="src/images/icons/check-circle.svg" alt="settings">
             </div>
             <div>
-              <h4 class="mb-3 font-semibold text-2xl ">Всегда актуальные заявки</h4>
+              <h4 class="lg:mb-3 mb-2 font-semibold lg:text-2xl text-lg lg:leading-[32px] leading-[26px]">Всегда
+                актуальные заявки</h4>
               <p>
                 Следим за качеством трафика и обмениваем некачественные лиды
               </p>
@@ -210,61 +311,104 @@
       </div>
     </search>
 
-    <search class="main-container relative bg-light rounded-3xl pt-[80px]">
-      <svg class="absolute top-0 right-0" width="241" height="152" viewBox="0 0 241 152" fill="none"
+     <!-- logo slider start -->
+    <section class="logo-slider lg:my-[80px] sm:mb-[56px] sm:mt-[107px] my-10">
+      <div class="logo-slider-wrap">
+        <div class="logo-slider-inner">
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">Продажа <span> заявок</span></div>
+          <div class="item-slide lg:text-[56px] leading-[110%] font-semibold sm:text-[44px] text-[28px]">для вашего бизнеса <span> от 70₽</span></div>
+        </div>
+      </div>
+    </section>
+    <!-- logo slider end -->
+
+    <search class="main-container relative sm:bg-light sm:rounded-3xl lg:pt-[80px] sm:pt-10 z-10">
+      <svg class="absolute top-0 right-0 lg:block hidden" width="241" height="152" viewBox="0 0 241 152" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <path opacity="0.4"
           d="M1 -23.9074C33.3333 -27.9074 98.6 -23.1074 101 28.0926C104 92.0926 149 109.093 186 91.0926C223 73.0926 225.222 43.9491 205 28.0926C185.872 13.0943 156 26.0926 148 53.0926C140 80.0926 145 135.093 255 151.093"
           stroke="#407BFF" />
       </svg>
-      <img class="absolute bottom-0 left-0" src="src/images/icons/card-line-4.svg" alt="">
+      <img class="absolute bottom-0 -z-10 left-0 lg:block hidden" src="src/images/icons/card-line-4.svg" alt="">
 
       <div class="container text-center">
-        <h2 class="title">Поможем увеличить вашу прибыль</h2>
-        <div class="mt-12 grid grid-cols-2 gap-6">
-          <div>
+        <h2 class="title">Поможем <span class="text-blue">увеличить</span> вашу прибыль</h2>
+        <div class="lg:mt-12 sm:mt-10 mt-6 grid sm:grid-cols-2 grid-cols-1 sm:gap-6 gap-3">
+          <div
+            class="sm:bg-transparent bg-light sm:p-0 pt-[30px] sm:rounded-none rounded-3xl sm:overflow-visible overflow-hidden px-5">
             <div
-              class="bg-blue rounded-[80px] py-3 px-8 text-white text-2xl font-semibold flex gap-4 items-center -rotate-2 w-fit mx-auto">
+              class="bg-blue rounded-[80px] py-3 px-8 text-white lg:text-2xl text-lg font-semibold flex gap-4 items-center -rotate-2 w-fit mx-auto">
               <img src="src/images/icons/coins.svg" alt="coins">
               <span>Кредиты</span>
             </div>
-            <h3 class="text-[32px] leading-[130%] font-semibold mb-4 mt-7">Было 42 заявки в месяц <br>
+            <h3
+              class="lg:text-[32px] lg:leading-[130%] text-xl leading-[30px] font-semibold lg:mb-4 lg:mt-7 mt-[15px] mb-4">
+              Было 42 заявки в месяц <br>
               <span class="text-blue">стало + 280 лидов дополнительно</span>
             </h3>
             <p>
               Помогли вырасти в 6 раз, при этом существенно снизили расходы на рекламу, выключив дорогие источники
             </p>
-            <div class="gap-12 flex items-end mt-[52px] w-fit mx-auto">
+            <div class="lg:gap-12 gap-6 flex items-end lg:mt-[52px] sm:mt-8 mt-5 w-fit mx-auto">
               <div>
-                <span class="text-[32px] leading-[130%] text-center mb-4 font-semibold">42</span>
-                <div class="w-[200px] h-[108px] rounded-t-[28px] bg-chart-bg bg-no-repeat bg-cover"></div>
+                <span
+                  class="lg:text-[32px] text-[25px] lg:leading-[130%] leading-full text-center mb-4 font-semibold">42</span>
+                <div
+                  class="lg:w-[200px] lg:h-[108px] w-[125px] h-[67px] lg:rounded-t-[28px] rounded-t-3xl bg-chart-bg bg-no-repeat bg-cover bg-white">
+                </div>
               </div>
               <div>
-                <span class="text-[32px] leading-[130%] text-center mb-4 font-extrabold">322</span>
-                <div class="w-[200px] h-[200px] bg-blue rounded-t-[28px]"></div>
+                <span
+                  class="lg:text-[32px] text-[25px] lg:leading-[130%] leading-full text-center lg:mb-4 mb-3 font-extrabold">322</span>
+                <div class="lg:w-[200px] lg:h-[200px] w-[125px] h-[125px] bg-blue lg:rounded-t-[28px] rounded-t-3xl">
+                </div>
               </div>
             </div>
           </div>
-          <div>
-            <div
-              class="bg-blue rounded-[80px] py-3 px-8 text-white text-2xl font-semibold flex gap-4 items-center rotate-2 w-fit mx-auto">
-              <img src="src/images/icons/scales.svg" alt="coins">
-              <span>Банкротство</span>
+          <div
+            class="flex flex-col justify-between sm:bg-transparent bg-light sm:p-0 pt-[30px] sm:rounded-none rounded-3xl sm:overflow-visible overflow-hidden px-5">
+            <div>
+              <div
+                class="bg-blue rounded-[80px] py-3 px-8 text-white lg:text-2xl text-lg font-semibold flex gap-4 items-center rotate-[4deg] w-fit mx-auto">
+                <img src="src/images/icons/scales.svg" alt="coins">
+                <span>Банкротство</span>
+              </div>
+              <h3
+                class="lg:text-[32px] lg:leading-[130%] text-xl leading-[30px] font-semibold lg:mb-4 lg:mt-7 mt-[15px] mb-4">
+                Было 120 заявок в месяц
+                <span class="text-blue">увеличили на 60 лидов</span>
+              </h3>
+              <p>
+                Помогли вырасти в 6 раз, при этом существенно снизили расходы на рекламу, выключив дорогие источники
+              </p>
             </div>
-            <h3 class="text-[32px] leading-[130%] font-semibold mb-4 mt-7">Было 120 заявок в месяц
-              <span class="text-blue">увеличили на 60 лидов</span>
-            </h3>
-            <p>
-              Помогли вырасти в 6 раз, при этом существенно снизили расходы на рекламу, выключив дорогие источники
-            </p>
-            <div class="gap-12 flex items-end mt-[52px] w-fit mx-auto">
+            <div class="lg:gap-12 gap-6 flex items-end lg:mt-[52px] sm:mt-8 mt-5 w-fit mx-auto">
               <div>
-                <span class="text-[32px] leading-[130%] text-center mb-4 font-semibold">120</span>
-                <div class="w-[200px] h-[153px] rounded-t-[28px] bg-chart-bg bg-no-repeat bg-cover"></div>
+                <span
+                  class="lg:text-[32px] text-[25px] lg:leading-[130%] leading-full text-center mb-4 font-semibold">120</span>
+                <div
+                  class="lg:w-[200px] lg:h-[153px] w-[125px] h-[67px] lg:rounded-t-[28px] rounded-t-3xl bg-chart-bg bg-no-repeat bg-cover bg-white">
+                </div>
               </div>
               <div>
-                <span class="text-[32px] leading-[130%] text-center mb-4 font-extrabold">180</span>
-                <div class="w-[200px] h-[200px] bg-blue rounded-t-[28px]"></div>
+                <span
+                  class="lg:text-[32px] text-[25px] lg:leading-[130%] leading-full text-center lg:mb-4 mb-3 font-extrabold">180</span>
+                <div class="lg:w-[200px] lg:h-[200px] w-[125px] h-[125px] bg-blue lg:rounded-t-[28px] rounded-t-3xl ">
+                </div>
               </div>
             </div>
           </div>
@@ -272,31 +416,39 @@
       </div>
     </search>
 
-    <search class="container flex gap-5 justify-between items-center my-[80px]">
-      <div class="max-w-[592px]">
-        <h2 class="title mb-8">Цены на заявки <br>
+    <search
+      class="container flex lg:gap-5 sm:gap-10 gap-8 lg:flex-row flex-col justify-between items-center lg:my-[80px] sm:my-14 my-10">
+      <div class="lg:max-w-[592px] max-w-[464px] lg:text-left text-center">
+        <h2 class="title lg:mb-8 mb-4">Цены на заявки <br>
           от <span class="text-blue">70₽</span></h2>
         <p>В системе предусмотрено динамическое изменение стоимости заявки от разных параметров</p>
       </div>
-      <div class="w-[636px] h-[431px] bg-light flex items-end rounded-3xl">
-        <img class="w-full h-[392px]" src="src/images/mac-img.png" alt="mac img">
+      <div class="lg:w-[636px] sm:h-[431px] h-[233px] bg-light flex items-end rounded-3xl overflow-hidden pl-2">
+        <img class="w-full lg:h-[392px] sm:h-[414px] h-[233px] sm:translate-y-0 translate-y-[10px] sm:block hidden"
+          src="src/images/mac-img.png" alt="mac img">
+        <img class="sm:hidden block" src="src/images/media-mac-img.png" alt="">
       </div>
     </search>
 
-    <search class="main-container text-white bg-blue pt-14 relative rounded-3xl mb-[80px] z-10">
-      <img class="absolute bottom-0 left-0 -z-10" src="src/images/icons/card-line-5.svg" alt="">
-      <img class="absolute top-0 right-0 -z-10" src="src/images/icons/card-line-2.svg" alt="">
-      <div class="container flex items-center gap-5 justify-between">
-        <img src="src/images/tablet.png" alt="tablet">
-        <div class="max-w-[580px]">
+    <search
+      class="main-container text-white bg-blue lg:pt-14 pt-10 relative rounded-3xl lg:mb-[80px] sm:mb-14 mb-10 z-10">
+      <img class="absolute lg:block hidden bottom-0 left-0 -z-10" src="src/images/icons/card-line-5.svg" alt="">
+      <img class="absolute lg:block hidden top-0 right-0 -z-10" src="src/images/icons/card-line-2.svg" alt="">
+      <div class="container flex items-center lg:gap-5 justify-between lg:flex-row flex-col-reverse sm:gap-10 gap-8">
+        <img class="xl:w-auto sm:w-[569px] sm:block hidden" src="src/images/tablet.png" alt="tablet">
+        <img class="sm:hidden block" src="src/images/media-tablet.png" alt="">
+        <div class="lg:max-w-[580px] sm:max-w-[525px] w-full lg:text-left sm:text-center">
           <div class="relative">
             <div
-              class="absolute top-[-11px] right-[93px] text-black rotate-[6.9deg] py-3 px-8 rounded-[80px] bg-white w-fit text-[40px] leading-[120%] font-semibold flex">
+              class="absolute lg:top-[-11px] sm:top-[-9px] top-[-15px] left-[159px] sm:left-[unset] sm:right-[-13px] lg:right-[93px] text-black sm:rotate-[6.9deg] rotate-3 py-3 px-8 rounded-[80px] bg-white w-fit lg:text-[40px] sm:text-[26px] text-[22px] leading-[120%] font-semibold flex">
               в 2 раза</div>
-            <h3 class="text-[40px] font-semibold leading-[120%] ">Получайте <br> больше горячих лидов уже сейчас</h3>
+            <h3
+              class="lg:text-[40px] sm:text-[26px] text-[22px] font-semibold leading-[120%] lg:w-full sm:w-[330px] w-[315px] mx-auto lg:mx-0">
+              Получайте <br> больше
+              горячих лидов уже сейчас</h3>
           </div>
-          <p class="mt-6 mb-12">Зарегистрируйтесь бесплатно, чтобы проверить как это работает</p>
-          <a class="btn-blue-big max-w-[214px]" href="#!">
+          <p class="lg:mt-6 mt-4 mb-6 lg:mb-12">Зарегистрируйтесь бесплатно, чтобы проверить как это работает</p>
+          <a class="btn-blue-big lg:max-w-[214px] sm:max-w-[185px] max-w-full !w-full sm:mx-auto lg:mx-0" href="#!">
             <span>Попробовать</span>
             <img src="src/images/icons/next-arrow.svg" alt="">
           </a>
@@ -304,34 +456,36 @@
       </div>
     </search>
 
-    <section class="container mb-[80px]">
-      <h2 class="title mb-8"><span class="text-blue">Интеграция</span> с другими сервисами</h2>
+    <section class="container lg:mb-[80px] sm:mb-14 mb-10">
+      <h2 class="title lg:mb-8 mb-4"><span class="text-blue">Интеграция</span> с другими сервисами</h2>
       <p>Автоматическая передача данных киентов</p>
-      <div class="grid grid-cols-3 gap-6  mt-12">
-        <div class="rounded-3xl flex items-center h-[140px] justify-center bg-light">
-          <img src="src/images/partner-img-1.png" alt="">
+      <div class="grid sm:grid-cols-3 grid-cols-1 sm:gap-6 gap-3 lg:mt-12 sm:mt-10 mt-6">
+        <div class="rounded-3xl flex items-center lg:h-[140px] sm:h-[74px] h-[100px] justify-center bg-light">
+          <img class="lg:w-auto lg:h-auto sm:w-[148px] w-[204px] sm:h-[28px] h-10" src="src/images/partner-img-1.png"
+            alt="">
         </div>
-        <div class="rounded-3xl flex items-center h-[140px] justify-center bg-light">
-          <img src="src/images/partner-img-2.png" alt="">
+        <div class="rounded-3xl flex items-center lg:h-[140px] sm:h-[74px] h-[100px] justify-center bg-light">
+          <img class="lg:w-auto lg:h-auto sm:w-[156px] w-[225px] sm:h-[28px] h-10" src="src/images/partner-img-2.png"
+            alt="">
         </div>
-        <div class="rounded-3xl flex items-center h-[140px] justify-center bg-light gap-6">
-          <h3 class="title">API</h3>
-          <p class="leading-[150%]">Для интеграции <br> с любой системой</p>
+        <div class="rounded-3xl flex items-center lg:h-[140px] sm:h-[74px] h-[100px] justify-center bg-light gap-6">
+          <img class="lg:w-auto lg:h-auto sm:w-[156px] w-[229px]" src="src/images/partner-img-3.png" alt="">
         </div>
       </div>
     </section>
 
-    <search class="pb-[104px] rounded-[64px] bg-white relative z-10">
+    <search class="lg:pb-[104px] sm:pb-[74px] pb-12 lg:rounded-[64px] rounded-3xl bg-white relative z-10">
       <div class="container">
         <h2 class="title">
           Часто задаваемые <span class="text-blue">вопросы</span>
         </h2>
-        <div class="mt-8 space-y-4 select-none">
-          <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
+        <div class="mt-8 lg:space-y-4 space-y-3 select-none">
+          <div class="accordion bg-light rounded-3xl lg:pl-8 py-5 lg:pr-5 px-5 flex flex-col">
             <div class="accordion-header flex items-center justify-between cursor-pointer">
-              <h4 class="text-xl font-semibold leading-[30px]">Сколько стоит сервис?</h4>
+              <h4 class="lg:text-xl text-base font-semibold lg:leading-[30px] sm:w-full w-[228px]">Сколько стоит сервис?
+              </h4>
               <div
-                class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
+                class="flex items-center justify-center lg:w-[52px] lg:h-[52px] w-[36px] h-[36px] lg:rounded-2xl rounded-lg bg-white accordion-btn duration-200">
                 <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2"
@@ -347,11 +501,12 @@
               </p>
             </div>
           </div>
-          <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
+          <div class="accordion bg-light rounded-3xl lg:pl-8 py-5 lg:pr-5 px-5 flex flex-col">
             <div class="accordion-header flex items-center justify-between cursor-pointer">
-              <h4 class="text-xl font-semibold leading-[30px]">Есть ли ограничения на сумму выплат?</h4>
+              <h4 class="lg:text-xl text-base font-semibold lg:leading-[30px] sm:w-full w-[228px]">Есть ли ограничения
+                на сумму выплат?</h4>
               <div
-                class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
+                class="flex items-center justify-center lg:w-[52px] lg:h-[52px] w-[36px] h-[36px] lg:rounded-2xl rounded-lg bg-white accordion-btn duration-200">
                 <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2"
@@ -367,11 +522,12 @@
               </p>
             </div>
           </div>
-          <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
+          <div class="accordion bg-light rounded-3xl lg:pl-8 py-5 lg:pr-5 px-5 flex flex-col">
             <div class="accordion-header flex items-center justify-between cursor-pointer">
-              <h4 class="text-xl font-semibold leading-[30px]">Есть ли ограничения на сумму выплат?</h4>
+              <h4 class="lg:text-xl text-base font-semibold lg:leading-[30px] sm:w-full w-[228px]">Есть ли ограничения
+                на сумму выплат?</h4>
               <div
-                class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
+                class="flex items-center justify-center lg:w-[52px] lg:h-[52px] w-[36px] h-[36px] lg:rounded-2xl rounded-lg bg-white accordion-btn duration-200">
                 <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2"
@@ -387,11 +543,12 @@
               </p>
             </div>
           </div>
-          <div class="accordion bg-light rounded-3xl pl-8 py-5 pr-5 flex flex-col">
+          <div class="accordion bg-light rounded-3xl lg:pl-8 py-5 lg:pr-5 px-5 flex flex-col">
             <div class="accordion-header flex items-center justify-between cursor-pointer">
-              <h4 class="text-xl font-semibold leading-[30px]">Сколько стоит сервис?</h4>
+              <h4 class="lg:text-xl text-base font-semibold lg:leading-[30px] sm:w-full w-[228px]">Сколько стоит сервис?
+              </h4>
               <div
-                class="flex items-center justify-center w-[52px] h-[52px] rounded-2xl bg-white accordion-btn duration-200">
+                class="flex items-center justify-center lg:w-[52px] lg:h-[52px] w-[36px] h-[36px] lg:rounded-2xl rounded-lg bg-white accordion-btn duration-200">
                 <svg class="duration-200" width="12" height="8" viewBox="0 0 12 8" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="duration-200" d="M1 1.5L6 6.5L11 1.5" stroke="#407BFF" stroke-width="2"
@@ -413,6 +570,166 @@
 
 
     <footer class="bg-black text-white pt-[112px] pb-12 -mt-16">
+      <div class="container">
+        <div class="sm:pb-10 pb-6 border-b border-[#434343] sm:mb-10 mb-6">
+          <div class="flex items-center justify-between">
+            <a href="#!">
+              <img src="src/images/footer-logo.svg" alt="footer logo">
+            </a>
+
+            <div class="flex items-center gap-6 lg:gap-12">
+              <a class="sm:flex hidden items-center gap-[10px]" href="#!">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.5 18L14.8571 12M9.14286 12L2.50003 18M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z"
+                    stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <span>mail@pochta.ru</span>
+              </a>
+              <a class="lg:text-2xl sm:block hidden text-xl font-semibold" href="#!">8 800 000-00-00</a>
+              <div class="flex gap-4 lg:gap-5">
+                <a class="w-10 h-10 bg-white flex items-centere justify-center rounded-full" href="#!">
+                  <img src="src/images/icons/whatsapp.svg" alt="" width="15" height="15">
+                </a>
+                <a class="w-10 h-10 bg-white flex items-centere justify-center rounded-full" href="#!">
+                  <img src="src/images/icons/tg-black.svg" alt="" width="16" height="13">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="sm:hidden block space-y-4 mt-8">
+            <a class="flex items-center gap-[10px]" href="#!">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21.5 18L14.8571 12M9.14286 12L2.50003 18M2 7L10.1649 12.7154C10.8261 13.1783 11.1567 13.4097 11.5163 13.4993C11.8339 13.5785 12.1661 13.5785 12.4837 13.4993C12.8433 13.4097 13.1739 13.1783 13.8351 12.7154L22 7M6.8 20H17.2C18.8802 20 19.7202 20 20.362 19.673C20.9265 19.3854 21.3854 18.9265 21.673 18.362C22 17.7202 22 16.8802 22 15.2V8.8C22 7.11984 22 6.27976 21.673 5.63803C21.3854 5.07354 20.9265 4.6146 20.362 4.32698C19.7202 4 18.8802 4 17.2 4H6.8C5.11984 4 4.27976 4 3.63803 4.32698C3.07354 4.6146 2.6146 5.07354 2.32698 5.63803C2 6.27976 2 7.11984 2 8.8V15.2C2 16.8802 2 17.7202 2.32698 18.362C2.6146 18.9265 3.07354 19.3854 3.63803 19.673C4.27976 20 5.11984 20 6.8 20Z"
+                  stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span>mail@pochta.ru</span>
+            </a>
+            <a class="lg:text-2xl text-xl font-semibold" href="#!">8 800 000-00-00</a>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-x-6 sm:gap-y-8 gap-y-3">
+          <div
+            class="sm:space-y-3 space-y-4 sm:p-0 p-4 sm:rounded-none rounded-lg sm:bg-transparent bg-[#FFFFFF1A] dropdown">
+            <div class="flex items-center justify-between dropdown-header">
+              <h3 class="lg:text-lg text-base">Купить лиды</h3>
+              <svg class="sm:hidden block dropdown-btn duration-200" width="12" height="8" viewBox="0 0 12 8"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <ul class="space-y-[10px] dropdown-content sm:block hidden">
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Купить лиды на кредит</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Купить лиды в Москве</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Купить заявки на кредит</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Купить лиды на кредитные карты</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="sm:space-y-3 space-y-4 sm:p-0 p-4 sm:rounded-none rounded-lg sm:bg-transparent bg-[#FFFFFF1A] dropdown">
+            <div class="flex items-center justify-between dropdown-header">
+              <h3 class="lg:text-lg text-base">Покупка лидов</h3>
+              <svg class="sm:hidden block dropdown-btn duration-200" width="12" height="8" viewBox="0 0 12 8"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <ul class="space-y-[10px] dropdown-content sm:block hidden">
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Лиды на кредит</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Купить лиды на банкротство</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Купить лиды на микрозаймы</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Лиды на кредит в городах</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="sm:space-y-3 space-y-4 sm:p-0 p-4 sm:rounded-none rounded-lg sm:bg-transparent bg-[#FFFFFF1A] dropdown">
+            <div class="flex items-center justify-between dropdown-header">
+              <h3 class="lg:text-lg text-base">Лиды на банкротство
+              </h3>
+              <svg class="sm:hidden block dropdown-btn duration-200" width="12" height="8" viewBox="0 0 12 8"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <ul class="space-y-[10px] dropdown-content sm:block hidden">
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Клиенты на банкротство</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Купить клиентов на банкротство </a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">физических лиц</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Услуги лидогенерации</a>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="sm:space-y-3 space-y-4 sm:p-0 p-4 sm:rounded-none rounded-lg sm:bg-transparent bg-[#FFFFFF1A] dropdown">
+            <div class="flex items-center justify-between dropdown-header">
+              <h3 class="lg:text-lg text-base">Базы данных
+              </h3>
+              <svg class="sm:hidden block dropdown-btn duration-200" width="12" height="8" viewBox="0 0 12 8"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1.5L6 6.5L11 1.5" stroke="#fff" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <ul class="space-y-[10px] dropdown-content sm:block hidden">
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">База заявок на кредит</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Лиды для кредитных брокеров</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Биржа лидов</a>
+              </li>
+              <li>
+                <a class="lg:text-sm text-xs text-white opacity-50" href="#!">Купить потенциальных клиентов</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="space-y-3 sm:my-10 my-6">
+          <span class="text-xs lg:text-sm block">123734, Сочи г, ул. Красивая 54/5.</span>
+          <span class="text-xs lg:text-sm block">ООО "CRMFIN", ИНН 5465545111, ОГРН 1358325732683 </span>
+          <span class="text-xs lg:text-sm block">Оператор персональных данных, регистрационный номер в реестре
+            операторов
+            Роскомнадзора 11-11-111333</span>
+        </div>
+        <div class="flex justify-between gap-4 sm:pt-8 pt-6 border-t border-[#434343] sm:flex-row flex-col">
+          <span class="opacity-50 lg:text-sm text-xs">© 2022–2024 crmFIN. Все права защищены.</span>
+          <span class="opacity-50 lg:text-sm text-xs">Политика обработки персональных данных</span>
+        </div>
+      </div>
+    </footer>
+    <!-- <footer class="bg-black text-white pt-[112px] pb-12 -mt-16">
       <div class="container flex items-end justify-between">
         <div class="space-y-8 max-w-[791px]">
           <span class="text-sm">Оператор персональных данных, регистрационный номер в реестре операторов Роскомнадзора
@@ -444,10 +761,13 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </div>
 
-
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
+  <!-- swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <!-- js -->
   <script src="src/js/main.js"></script>
 </body>
