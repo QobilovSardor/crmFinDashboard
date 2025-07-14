@@ -1,45 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//   const accordions = document.querySelectorAll('.accordion');
-
-//   accordions.forEach(accordion => {
-//     const header = accordion.querySelector('.accordion-header');
-//     const content = accordion.querySelector('.accordion-content');
-//     const btn = accordion.querySelector('.accordion-btn');
-//     const svg = btn.querySelector('svg');
-
-//     content.style.overflow = 'hidden';
-//     content.style.transition = 'max-height 0.3s ease';
-
-//     header.addEventListener('click', () => {
-//       const isOpen = accordion.classList.contains('open');
-
-//       if (isOpen) {
-//         // Yopish
-//         content.style.maxHeight = '0px';
-//         accordion.classList.remove('open');
-//         btn.classList.remove('active');
-//         svg.classList.remove('rotate-180');
-//       } else {
-//         // Boshqalarni yopish
-//         accordions.forEach(acc => {
-//           acc.classList.remove('open');
-//           acc.querySelector('.accordion-content').style.maxHeight = '0px';
-
-//           const otherBtn = acc.querySelector('.accordion-btn');
-//           const otherSvg = otherBtn.querySelector('svg');
-//           otherBtn.classList.remove('active');
-//           otherSvg.classList.remove('rotate-180');
-//         });
-
-//         // Yangi accordionni ochish
-//         content.style.maxHeight = content.scrollHeight + 'px';
-//         accordion.classList.add('open');
-//         btn.classList.add('active');
-//         svg.classList.add('rotate-180');
-//       }
-//     });
-//   });
-// });
 
 document.addEventListener('DOMContentLoaded', function () {
   const accordions = document.querySelectorAll('.accordion');
@@ -101,6 +59,7 @@ dropdowns.forEach(dropdown => {
 })
 
 
+
 var swiper = new Swiper(".cards-swiper", {
   effect: "cards",
   grabCursor: true,
@@ -111,10 +70,34 @@ var swiper = new Swiper(".cards-swiper", {
 });
 
 
-$('.logo-slider-wrap').marquee({
-  duration: 10000,          // Butun animatsiya davomiyligi (ms)
-  gap: 50,                 // Elementlar orasidagi bo‘shliq (px)
-  delayBeforeStart: 0,     // Boshlanishdan oldingi kechikish
-  direction: 'left',       // Harakat yo‘nalishi: 'left' yoki 'right'
-  duplicated: true         // Kontentni ikki marta ko‘rsatish (to‘xtovsiz aylanish uchun)
-});
+
+$(document).ready(function () {
+
+  $("#modal-recovery .modal-bottom .fancybox, #modal-authorization .modal-bottom .fancybox").click(function () {
+    $.fancybox.close(true);
+    console.log('salom');
+  });
+
+  $("#modal-registration .btn-main").click(function (e) {
+    e.preventDefault();
+    $.fancybox.close(true);
+    $.fancybox.open({
+      src: '#modal-success',
+      type: 'inline'
+    });
+  });
+
+  var properties = {
+    duration: 8000,     // Длительность движения в миллисекундах, чем больше тем медленнее.
+    direction: 'left',  // Направление, может быть 'left' или 'right'.
+    delayBeforeStart: 0 // Задержка в миллисекундах перед началом движения.
+  };
+  $('.logo-slider-wrap').marquee(properties);
+
+  $(".fancybox").fancybox({
+    autoFocus: false
+  });
+
+  $(".input-phone").mask("+7 (999) 999-99-99");
+
+})

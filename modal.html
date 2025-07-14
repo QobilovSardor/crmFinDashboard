@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- fancybox -->
+  <link rel="stylesheet" href="src/libs/jquery.fancybox.min.css">
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- font -->
+  <link rel="stylesheet" href="src/fonts/montserrat/stylesheet.css">
+  <!-- custom css link -->
+  <link rel="stylesheet" href="src/css/main.css">
+</head>
+
+<body>
+
+  <div class="md:m-[100px] m-[50px] space-y-10">
+    <a href="#enter-number" class="fancybox block">Введите номер телефона modal</a>
+    <a href="#enter-number-2" class="fancybox block">Введите номер телефона modal</a>
+    <a href="#enter-number-3" class="fancybox block">Введите номер телефона modal</a>
+  </div>
+
+
+  <!-- modals -->
+  <div id="modal-success" class="modal-block">
+    <div class="modal-wrap">
+      <div class="head-modal">
+        <div class="title-modal">Успешно</div>
+        <div class="descr-modal">Спасибо за регистрацию в crmFIN.ru</div>
+      </div>
+      <a href="#modal-authorization" class="btn-main fancybox">Авторизоваться</a>
+    </div>
+  </div>
+
+  <div id="enter-number" class="modal-block">
+    <div class="modal-wrap">
+      <div class="head-modal">
+        <div class="title-modal text-center">Введите номер телефона</div>
+        <p class="descr-modal">Чтобы войти или зарегистрироваться</p>
+      </div>
+      <div>
+        <div class="item-form">
+          <input type="text" placeholder="Телефон" class="input-phone" required="required">
+        </div>
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" required="required" checked="checked" />
+            <span>Я принимаю условия <a class="inline" href="#">Пользовательского соглашения</a> и даю согласие на <a
+                class="inline" href="#">обработку персональных данных</a></span>
+          </label>
+        </div>
+        <a href="#enter-number-2" class="btn-main fancybox">Войти</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="enter-number-2" class="modal-block">
+    <div class="modal-wrap">
+      <div class="head-modal">
+        <div class="title-modal text-center">Нет аккаунтов
+          с этим номером</div>
+        <p class="descr-modal">Можно зарегистрировать новый аккаунт</p>
+      </div>
+      <div>
+        <div class="text-center md:mb-8 mb-6 md:space-y-4 space-y-2">
+          <h3 class="text-2xl font-semibold text-black">+7 (952) 783-58-63</h3>
+          <a href="#enter-number" class="fancybox text-blue text-sm">Изменить номер телефона</a>
+        </div>
+        <a href="#enter-number-3" class="btn-main !mt-0 fancybox">Создать аккаунт</a>
+        <button type="button"
+          class="btn-main !border-[#DEE3F3] !border-solid !border !bg-transparent !text-black" data-fancybox-close>Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="enter-number-3" class="modal-block">
+    <div class="modal-wrap">
+      <div class="head-modal">
+        <div class="title-modal text-center">Введите 6 цифр отправленные по СМС</div>
+        <p class="!text-sm mt-4 text-gray">СМС было отправлено на номер <br class="md:hidden block"> +7 (952) 783-58-63</p>
+      </div>
+      <div>
+        <div class="grid grid-cols-2 gap-5 w-[324px] mx-auto">
+          <div class="grid grid-cols-3 gap-[10px]">
+            <input class="h-16 rounded-lg text-center p-1 border border-[#DEE3F3] text-[32px] font-light text-black"
+              type="number" placeholder="_">
+            <input class="h-16 rounded-lg text-center p-1 border border-[#DEE3F3] text-[32px] font-light text-black"
+              type="number" placeholder="_">
+            <input class="h-16 rounded-lg text-center p-1 border border-[#DEE3F3] text-[32px] font-light text-black"
+              type="number" placeholder="_">
+          </div>
+          <div class="grid grid-cols-3 gap-[10px]">
+            <input class="h-16 rounded-lg text-center p-1 border border-[#DEE3F3] text-[32px] font-light text-black"
+              type="number" placeholder="_">
+            <input class="h-16 rounded-lg text-center p-1 border border-[#DEE3F3] text-[32px] font-light text-black"
+              type="number" placeholder="_">
+            <input class="h-16 rounded-lg text-center p-1 border border-[#DEE3F3] text-[32px] font-light text-black"
+              type="number" placeholder="_">
+          </div>
+        </div>
+        <div class="md:my-8 my-6 space-y-4 text-center">
+          <span class="text-sm text-gray">Отправить смс повторно через 00:32</span>
+          <a href="#enter-number" class="fancybox text-blue text-sm">Изменить номер телефона</a>
+        </div>
+        <div class="space-y-3">
+          <a class="btn-main !mt-0">Продолжить</a>
+          <button type="button"
+            class="btn-main !border-[#DEE3F3] !border-solid !border !bg-transparent !text-black" data-fancybox-close>Закрыть</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+  <!-- Fancybox (jQuery plugin) -->
+  <script src="src/libs/jquery.fancybox.min.js"></script>
+
+  <!-- Swiper (mustaqil kutubxona) -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="src/js/main.js"></script>
+</body>
+
+</html>
