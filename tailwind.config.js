@@ -13,8 +13,8 @@ export default {
         "light": "#F4F7FF"
       },
       backgroundImage: {
-        'intro-bg': "url('../images/intro-bg.png')",
-        "chart-bg": "url('../images/chart-bg.png')"
+        'intro-bg': "url('../images/intro-bg.webp')",
+        "chart-bg": "url('../images/chart-bg.webp')"
       },
       lineHeight: {
         'full': "100%"
