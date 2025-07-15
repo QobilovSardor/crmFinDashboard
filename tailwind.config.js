@@ -20,7 +20,7 @@ export default {
         'full': "100%"
       },
       fontFamily: {
-        'Montserrat': ["Montserrat, 'sans-serif'"]
+        'Montserrat': ["'Montserrat', sans-serif"]
       }
     },
   },
