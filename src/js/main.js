@@ -100,4 +100,46 @@ $(document).ready(function () {
 
   $(".input-phone").mask("+7 (999) 999-99-99");
 
+
+   const allInputs = $(".code-input");
+
+    allInputs.on("input", function () {
+      const inputs = $(".code-input"); // Har gal yangilab olaylik
+      const input = $(this);
+      let value = input.val().replace(/[^0-9]/g, '');
+      const currentIndex = inputs.index(this);
+
+      if (value.length > 1) {
+        for (let i = 0; i < value.length; i++) {
+          if (currentIndex + i < inputs.length) {
+            inputs.eq(currentIndex + i).val(value[i]);
+          }
+        }
+        const next = inputs.eq(currentIndex + value.length);
+        if (next.length) next.focus();
+      } else {
+        input.val(value.slice(0, 1));
+        inputs.eq(currentIndex + 1).focus();
+      }
+    });
+
+    allInputs.on("keydown", function (e) {
+      const inputs = $(".code-input");
+      const input = $(this);
+      const currentIndex = inputs.index(this);
+
+      if (e.key === "Backspace" && input.val() === "") {
+        inputs.eq(currentIndex - 1).focus();
+      }
+    });
+
+    allInputs.on("paste", function (e) {
+      const paste = (e.originalEvent || e).clipboardData.getData('text');
+      const digits = paste.replace(/[^0-9]/g, '').slice(0, allInputs.length);
+      allInputs.each(function (i) {
+        $(this).val(digits[i] || "");
+      });
+      allInputs.eq(digits.length).focus();
+      e.preventDefault();
+    });
 })
